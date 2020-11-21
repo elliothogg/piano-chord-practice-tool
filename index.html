@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>piano-chord-practice-tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <h1>Piano Chord Practice Tool</h1>
+    </header>
+
+    <section>
+        <h2>Choose a key:</h2>
+        <main>
+            <ul>
+                <li>
+                    <input type="checkbox" id="Ab">
+                    <label for="Ab">Ab</label>    
+                </li>
+                <li>
+                    <input type="checkbox" id="Bb">
+                    <label for="Bb">Bb</label>    
+                </li>
+                <li>
+                    <input type="checkbox" id="Eb">
+                    <label for="Eb">Eb</label>    
+                </li>
+                <li>
+                    <input type="checkbox" id="E">
+                    <label for="E">E</label>    
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Choose Difficulty:</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="triads-only">
+                    <label for="triads-only">Triads Only</label>    
+                </li>
+                <li>
+                    <input type="checkbox" id="7th-Chords">
+                    <label for="7th-Chords">7th Chords</label>    
+                </li>
+                <li>
+                    <input type="checkbox" id="Jazz-Extensions-1">
+                    <label for="Jazz-Extensions-1">Jazz Extensions 1</label>    
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Choose Speed:</h2> 
+            <input type="range" id="speed" min="0" max="10">
+        </section>
+        
+        <section>
+            <button type="button" id="start">Start</button>
+            <button type="button" id="stop">Stop</button>
+        </section>
+        
+        <textarea id="chords" disabled="true" readonly="true">
+            Chords will appear here.
+        </textarea>
+        
+        
+    </main>
+
+
+    <footer>
+
+
+    </footer>
+
+</body>
