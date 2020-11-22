@@ -1,0 +1,60 @@
+body {
+  max-width: 700px;
+  margin: auto; 
+  background-color: rgb(49, 49, 49);
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+main {
+  background-color: rgb(160, 160, 160);
+  padding:50px;
+  padding-top: 20px;
+}
+
+header {
+  background-color: rgb(160, 160, 160);
+  padding-top: 50px;
+  margin-top:20px;
+
+}
+
+textarea {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-color: grey;
+    text-align: center;
+    font-size: 30pt;
+    margin:0;
+    border-color: rgb(65, 65, 65);
+    border-style: solid;
+    border-width: 3px;
+    padding-top: 30px;
+  }
+
+h1 {
+  color:rgb(255, 255, 255);
+  margin:0;
+  padding-left: 50px;
+}
+
+form {
+  width: 100%;
+  padding:0;
+}
+
+fieldset{
+  margin:0;
+  border-color: rgb(65, 65, 65);
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom: 20px;
+}
+
+input {
+  filter: grayscale(1);
+}
+
+#start-stop-buttons {
+  padding-top: 15px;
+}
