@@ -58,3 +58,12 @@ input {
 #start-stop-buttons {
   padding-top: 15px;
 }
+
+label {
+  padding-right: 10px;
+}
+
+input {
+  margin-right: 0;
+  margin-top: 10px;
+}

@@ -17,20 +17,45 @@
     <main>
 
         <form>
-            <fieldset>
+            <fieldset id="selected-key">
             <legend>Choose Key:</legend>
         
-            <input type="radio" id="Ab" name="key" checked>
-            <label for="Ab">Ab</label>
+            <input type="radio" id="C" name="key" value="C" checked>
+            <label for="C">C</label>
         
-            <input type="radio" id="Bb" name="key">
+            <input type="radio" id="F" name="key" value="F">
+            <label for="F">F</label>
+        
+            <input type="radio" id="Bb" name="key" value="Bb">
             <label for="Bb">Bb</label>
         
-            <input type="radio" id="Eb" name="key">
+            <input type="radio" id="Eb" name="key" value="Eb">
             <label for="Eb">Eb</label>
+            
+            <input type="radio" id="Ab" name="key" value="Ab">
+            <label for="Ab">Ab</label>
+            
+            <input type="radio" id="Db" name="key" value="Db">
+            <label for="Db">Db</label><br>
+
+            <input type="radio" id="Gb" name="key" value="Gb" checked>
+            <label for="Gb">Gb</label>
+            
+            <input type="radio" id="B" name="key" value="B">
+            <label for="B">B</label>
         
-            <input type="radio" id="E" name="key">
-            <label for="E">E</label>
+            <input type="radio" id="E" name="key" value="E">
+            <label for="E">E</label>            
+
+            <input type="radio" id="A" name="key" value="A">
+            <label for="A">A</label>
+        
+            <input type="radio" id="D" name="key" value="D">
+            <label for="D">D</label>
+        
+            <input type="radio" id="G" name="key" value="G">
+            <label for="G">G</label>
+
             </fieldset>
         </form>
 
@@ -38,13 +63,13 @@
             <fieldset>
                 <legend>Choose Mode:</legend>
         
-            <input type="radio" id="triads-only" name="difficulty" checked>
+            <input type="radio" id="triads-only" name="mode" value="triads" checked>
             <label for="triads-only">Triads Only</label>
             
-            <input type="radio" id="7th-chords" name="difficulty">
+            <input type="radio" id="7th-chords" name="mode" value="seventhChords">
             <label for="7th-chords">7th Chords</label>
         
-            <input type="radio" id="jazz-extensions-1" name="difficulty">
+            <input type="radio" id="jazz-extensions-1" name="mode" value="jazzExtensions1">
             <label for="jazz-extensions-1">Jazz Extensions 1</label>
             </fieldset>
         </form>
@@ -58,7 +83,7 @@
             
         <form>
             <fieldset id="start-stop-buttons">
-                <button type="button" id="start" onClick="sayHello()">Start</button>
+                <button type="button" id="start" onClick="displayChords()">Start</button>
                 <button type="button" id="stop">Stop</button>
             </fieldset>
         </form>
