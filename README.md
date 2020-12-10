@@ -1,7 +1,5 @@
 # piano-chord-practice-tool
 
-$npm install http-server
+$ npm install http-server
 
-$ http-server
-
-localhost:8080
+$ http-server -c-1 -p 8080
