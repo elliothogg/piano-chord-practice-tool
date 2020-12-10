@@ -77,14 +77,15 @@
         <form>
             <fieldset>
                 <legend>Choose Speed:</legend>
-                <input type="range" id="speed" min="0" max="10">
+                <input type="range" id="speed" value=1 min="1" max="10" oninput="this.nextElementSibling.value = this.value" onchange="changeSpeed()">
+                <output>1</output>
             </fieldset>
         </form>
             
         <form>
             <fieldset id="start-stop-buttons">
-                <button type="button" id="start" onClick="displayChords()">Start</button>
-                <button type="button" id="stop">Stop</button>
+                <button type="button" id="start" onClick="startApp()">Start</button>
+                <button type="button" id="stop" onClick="stopApp()">Stop</button>
             </fieldset>
         </form>
             

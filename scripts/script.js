@@ -1,8 +1,31 @@
-function displayChords() {
-    key = document.querySelector('input[name = key]:checked').value
-    mode = document.querySelector('input[name = mode]:checked').value
-    document.getElementById('chords').value = zipWith(keys[key], chords[mode])
+let isAppRunning = false;
 
+function startApp() {
+    if (!isAppRunning)
+    {
+    isAppRunning = true;
+    returnRandomChord()
+    start = setInterval(returnRandomChord, getSpeed())
+    }
+}
+
+
+function changeSpeed() {
+    if (isAppRunning) {
+        stopApp()
+        startApp()
+    }
+}
+
+function stopApp() {
+    clearInterval(start)
+    document.getElementById('chords').value = ""
+    isAppRunning = false;
+}
+
+function returnRandomChord() {
+    chordList = returnChordList()
+    document.getElementById('chords').value = randomElementSelector(chordList)
 }
 
 let Eb = ["Eb","F","G","Ab","Bb","C","D"]
@@ -20,7 +43,7 @@ keys = {
     A: ["A","B","C#","D","E","F#","G#"],
     D: ["D","E","F#","G","A","B","C#"],
     G: ["G","A","B","C","D","E","F#"],
-    }
+}
 
 chords = {
     triads: ["","m","m","","","m","b5"],
@@ -28,23 +51,29 @@ chords = {
     jazzExtensions1: ["ma9","mi9","mi7","ma7","7(b9)","mi9","mi7b5"]
 }
 
+randomElementSelector = (array) =>
+array[Math.floor((Math.random() * array.length) + 0)]
 
 
+function returnChordList() {
+    key = document.querySelector('input[name = key]:checked').value
+    mode = document.querySelector('input[name = mode]:checked').value
+    return zipWith(keys[key], chords[mode])
+}
 
 function zipWith(array1, array2) {
     const zippedArray = []
-
+    
     for (i=0; i < array1.length; i++) {
         zippedArray[i] = array1[i].concat(array2[i])
     }
     return zippedArray
 }
 
-
-const EbTriads = zipWith(Eb,triads)
-
-hello = document.getElementById("key")
-
-console.log(EbTriads)
-console.log(document.getElementsByName('key'))
-
+function getSpeed(){
+    speed = document.querySelector('input[id = speed]').value
+    console.log(speed)
+    msSpeed = parseInt(speed) * 700
+    console.log(msSpeed)
+    return msSpeed
+}
