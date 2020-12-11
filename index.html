@@ -5,163 +5,22 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/script.js"></script>
-    <title>piano-chord-practice-tool</title>
+    <title>Piano-Practice-Tools</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <header>
-        <h1>Piano Chord Practice Tool</h1>
+        <h1>Piano Practice Tools</h1>
     </header>
 
     <main>
-
-        <form>
-            <fieldset id="selected-key">
-            <legend>Choose Key:</legend>
-        
-            <input type="radio" id="C" name="key" value="C" checked>
-            <label for="C">C</label>
-        
-            <input type="radio" id="F" name="key" value="F">
-            <label for="F">F</label>
-        
-            <input type="radio" id="Bb" name="key" value="Bb">
-            <label for="Bb">Bb</label>
-        
-            <input type="radio" id="Eb" name="key" value="Eb">
-            <label for="Eb">Eb</label>
-            
-            <input type="radio" id="Ab" name="key" value="Ab">
-            <label for="Ab">Ab</label>
-            
-            <input type="radio" id="Db" name="key" value="Db">
-            <label for="Db">Db</label><br>
-
-            <input type="radio" id="Gb" name="key" value="Gb" checked>
-            <label for="Gb">Gb</label>
-            
-            <input type="radio" id="B" name="key" value="B">
-            <label for="B">B</label>
-        
-            <input type="radio" id="E" name="key" value="E">
-            <label for="E">E</label>            
-
-            <input type="radio" id="A" name="key" value="A">
-            <label for="A">A</label>
-        
-            <input type="radio" id="D" name="key" value="D">
-            <label for="D">D</label>
-        
-            <input type="radio" id="G" name="key" value="G">
-            <label for="G">G</label>
-
-            </fieldset>
-        </form>
-
-        <form>
-            <fieldset>
-                <legend>Choose Mode:</legend>
-        
-            <input type="radio" id="triads-only" name="mode" value="triads" checked>
-            <label for="triads-only">Triads Only</label>
-            
-            <input type="radio" id="7th-chords" name="mode" value="seventhChords">
-            <label for="7th-chords">7th Chords</label>
-        
-            <input type="radio" id="jazz-extensions-1" name="mode" value="jazzExtensions1">
-            <label for="jazz-extensions-1">Jazz Extensions 1</label>
-            </fieldset>
-        </form>
-
-        <form>
-            <fieldset>
-                <legend>Choose Speed:</legend>
-                <input type="range" id="speed" value=1 min="1" max="10" oninput="this.nextElementSibling.value = this.value" onchange="changeSpeed()">
-                <output>1</output>
-            </fieldset>
-        </form>
-            
-        <form>
-            <fieldset id="start-stop-buttons">
-                <button type="button" id="start" onClick="startApp()">Start</button>
-                <button type="button" id="stop" onClick="stopApp()">Stop</button>
-            </fieldset>
-        </form>
-            
-        <textarea id="chords" disabled="true" readonly="true">      
-        </textarea>
-      
-        
-        <figure id="keyboard">
-            <div class="left_cluster">
-                <div class="key white_key" id="C2"></div>
-                <div class="key black_key" id="Db2"></div>
-                <div class="key white_key" id="D2"></div>
-                <div class="key black_key" id="Eb2"></div>
-                <div class="key white_key" id="E2"></div>
-            </div>
-            <div class="right_cluster">
-                <div class="key white_key" id="F2"></div>
-                <div class="key black_key" id="Gb2"></div>
-                <div class="key white_key" id="G2"></div>
-                <div class="key black_key" id="Ab2"></div>
-                <div class="key white_key" id="A2"></div>
-                <div class="key black_key" id="Bb2"></div>
-                <div class="key white_key" id="B2"></div>
-            </div>
-            <div class="left_cluster">
-                <div class="key white_key" id="C3"></div>
-                <div class="key black_key" id="Db3"></div>
-                <div class="key white_key" id="D3"></div>
-                <div class="key black_key" id="Eb3"></div>
-                <div class="key white_key" id="E3"></div>
-            </div>
-            <div class="right_cluster">
-                <div class="key white_key" id="F3"></div>
-                <div class="key black_key" id="Gb3"></div>
-                <div class="key white_key" id="G3"></div>
-                <div class="key black_key" id="Ab3"></div>
-                <div class="key white_key" id="A3"></div>
-                <div class="key black_key" id="Bb3"></div>
-                <div class="key white_key" id="B3"></div>
-            </div>
-            <div class="left_cluster">
-                <div class="key white_key" id="C4">
-                    <p>m</p>
-                </div>
-                <div class="key black_key" id="Db4"></div>
-                <div class="key white_key" id="D4"></div>
-                <div class="key black_key" id="Eb4"></div>
-                <div class="key white_key" id="E4"></div>
-            </div>
-            <div class="right_cluster">
-                <div class="key white_key" id="F4"></div>
-                <div class="key black_key" id="Gb4"></div>
-                <div class="key white_key" id="G4"></div>
-                <div class="key black_key" id="Ab4"></div>
-                <div class="key white_key" id="A4"></div>
-                <div class="key black_key" id="Bb4"></div>
-                <div class="key white_key" id="B4"></div>
-            </div>
-                <div class="left_cluster">
-                <div class="key white_key" id="C5"></div>
-                <div class="key black_key" id="Db5"></div>
-                <div class="key white_key" id="D5"></div>
-                <div class="key black_key" id="Eb5"></div>
-                <div class="key white_key" id="E5"></div>
-            </div>
-            <div class="right_cluster">
-                <div class="key white_key" id="F5"></div>
-                <div class="key black_key" id="Gb5"></div>
-                <div class="key white_key" id="G5"></div>
-                <div class="key black_key" id="Ab5"></div>
-                <div class="key white_key" id="A5"></div>
-                <div class="key black_key" id="Bb5"></div>
-                <div class="key white_key" id="B5"></div>
-            </div>
-        </figure>
-            
+        <nav>
+            <ul>
+                <li><a href="simple-piano-chord-game.html">Simple Piano Chord Game</a></li>
+                <li><a href="/chord-visualiser.html">Chord Visualiser</a></li>
+            </ul>
+        </nav>
     </main>
 
 

@@ -25,7 +25,8 @@ function stopApp() {
 
 function returnRandomChord() {
     chordList = returnChordList()
-    document.getElementById('chords').value = randomElementSelector(chordList)
+    randomChord = randomElementSelector(chordList)
+    document.getElementById('chords').value = randomChord
 }
 
 let Eb = ["Eb","F","G","Ab","Bb","C","D"]
@@ -53,7 +54,6 @@ chords = {
 
 randomElementSelector = (array) =>
 array[Math.floor((Math.random() * array.length) + 0)]
-
 
 function returnChordList() {
     key = document.querySelector('input[name = key]:checked').value
