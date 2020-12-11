@@ -1,5 +1,10 @@
+:root {
+  --key_width: calc(100%/28);
+  --half_key_width: calc(100%/52);
+}
+
 body {
-  max-width: 700px;
+  max-width: 70ch;
   margin: auto; 
   background-color: rgb(49, 49, 49);
   font-family: "Lucida Console", Courier, monospace;
@@ -66,4 +71,94 @@ label {
 input {
   margin-right: 0;
   margin-top: 10px;
+}
+
+#speed {
+  max-width: 100%;
+}
+
+#keyboard {
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 7rem;
+  display: inline-flex;
+  background-color: #e6e6e6;
+}
+
+.key {
+  padding: 0;
+  margin: 0;
+  width: 20.438px;
+  height: 100%;
+  display:inline-block;
+  box-sizing: border-box;
+}
+
+.key:hover {
+  background-color: red;
+}
+
+#keyboard :last-child :last-child {
+  border-right: 0;
+}
+
+/* number of white keys = 28  */
+.white_key {
+  background-color: #e6e6e6;
+  border: 0;
+  border-right: 0.5px;
+  border-style: solid;
+  border-color: black;
+  
+}
+
+/* number of black keys = 20  */
+.black_key {
+  width: 12px;
+  background-color: #1b1b1b;
+  max-height: 70%;
+  position: absolute;
+}
+
+.left_cluster {
+  display: inline-flex;
+  position: relative;
+}
+
+.right_cluster {
+  display: inline-flex;
+  position: relative;
+}
+
+.left_cluster :nth-child(2) {
+  left: 20%;
+}
+
+.left_cluster :nth-child(4) {
+  left: 60%;
+}
+
+.right_cluster :nth-child(2) {
+  left: 17%;
+}
+
+.right_cluster :nth-child(4) {
+  left: 42%;
+}
+
+.right_cluster :nth-child(6) {
+  left: 66%;
+}
+
+.right_cluster {
+  display: inline-flex;
+}
+
+#C4 p {
+  margin: 0;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
 }
