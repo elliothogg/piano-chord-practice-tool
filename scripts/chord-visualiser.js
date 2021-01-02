@@ -62,6 +62,12 @@ function displayChord(root) {
     document.getElementById(note).style.backgroundColor='green';
 }
 
+function test() {
+    note = 'Eb2';
+    console.log(note)
+    document.getElementById(note).style.backgroundColor='green';
+}
+
 function returnChordList() {
     key = document.querySelector('input[name = key]:checked').value
     mode = document.querySelector('input[name = mode]:checked').value
@@ -78,9 +84,20 @@ function zipWith(array1, array2) {
 }
 
 function getSpeed(){
-    speed = document.querySelector('input[id = speed]').value
-    console.log(speed)
-    msSpeed = parseInt(speed) * 700
+    speed = parseInt(document.querySelector('input[id = speed]').value)
+    
+    msSpeed = 11 - speed * 700
     console.log(msSpeed)
     return msSpeed
 }
+
+1 = 7000
+2 = 6300
+3 = 5600
+4 = 4900
+5 = 4200
+6 = 3500
+7 = 2800
+8 = 2100
+9 = 1400
+10 = 700

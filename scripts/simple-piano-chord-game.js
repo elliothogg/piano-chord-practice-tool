@@ -71,9 +71,9 @@ function zipWith(array1, array2) {
 }
 
 function getSpeed(){
-    speed = document.querySelector('input[id = speed]').value
-    console.log(speed)
-    msSpeed = parseInt(speed) * 700
+    speed = parseInt(document.querySelector('input[id = speed]').value)
+    
+    msSpeed = (11 - speed) * 700
     console.log(msSpeed)
     return msSpeed
 }
