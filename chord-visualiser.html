@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/chord-visualiser.js"></script>
+    <script type="text/javascript" src="scripts/noteToMidiData.js"></script>
     <title>piano-chord-practice-tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body onLoad="displayChordText()">
     <header>
         <h1>Piano Chord Practice Tool</h1>
     </header>
@@ -17,7 +18,7 @@
     <main>
 
         <form>
-            <fieldset id="selected-key">
+            <fieldset id="selected-key" onchange="displayChordText()">
             <legend>Choose Key:</legend>
         
             <input type="radio" id="C" name="key" value="C" checked>
@@ -38,7 +39,7 @@
             <input type="radio" id="Db" name="key" value="Db">
             <label for="Db">Db</label><br>
 
-            <input type="radio" id="Gb" name="key" value="Gb" checked>
+            <input type="radio" id="Gb" name="key" value="Gb">
             <label for="Gb">Gb</label>
             
             <input type="radio" id="B" name="key" value="B">
@@ -60,35 +61,49 @@
         </form>
 
         <form>
-            <fieldset>
-                <legend>Choose Mode:</legend>
-        
-            <input type="radio" id="triads-only" name="mode" value="triads" checked>
-            <label for="triads-only">Triads Only</label>
+            <fieldset onchange="displayChordText()">
+                <legend>Choose Chord:</legend>
+                
+                <input type="radio" id="dim" name="chord" value="&#9900;">
+                <label for="triads-only">&#9900;</label>
+                
+                <input type="radio" id="aug" name="chord" value="+">
+                <label for="triads-only">+</label>
+                
+                <input type="radio" id="maj7" name="chord" value="maj7">
+                <label for="triads-only">maj7</label>
+
+                <input type="radio" id="7" name="chord" checked value="7">
+                <label for="triads-only">7</label>
+
+                <input type="radio" id="min7" name="chord" value="min7">
+                <label for="triads-only">min7</label>
+
+                <input type="radio" id="9" name="chord" value="9">
+                <label for="triads-only">9</label>
+
+                <input type="radio" id="7(b9)" name="chord" value="7(b9)">
+                <label for="triads-only">7(b9)</label>
+
+                <input type="radio" id="13(b9)" name="chord" value="13(b9)">
+                <label for="triads-only">13(b9)</label>
             
-            <input type="radio" id="7th-chords" name="mode" value="seventhChords">
-            <label for="7th-chords">7th Chords</label>
-        
-            <input type="radio" id="jazz-extensions-1" name="mode" value="jazzExtensions1">
-            <label for="jazz-extensions-1">Jazz Extensions 1</label>
+           
             </fieldset>
         </form>
 
         <form>
             <fieldset>
-                <legend>Choose Speed:</legend>
-                <input type="range" id="speed" value=1 min="1" max="10" oninput="this.nextElementSibling.value = this.value" onchange="changeSpeed()">
-                <output>1</output>
+                <legend>Choose Arrangement:</legend>
+        
+            <input type="radio" id="both-hands" name="arrangement" value="both-hands" checked>
+            <label for="triads-only">Both Hands</label>
+            
+            <input type="radio" id="LH" name="arrangement" value="LH">
+            <label for="7th-chords">LH</label>
             </fieldset>
         </form>
-            
-        <form>
-            <fieldset id="start-stop-buttons">
-                <button type="button" id="start" onClick="test()">Start</button>
-                <button type="button" id="stop" onClick="stopApp()">Stop</button>
-            </fieldset>
-        </form>
-            
+        
         <textarea id="chords" disabled="true" readonly="true">      
         </textarea>
       
