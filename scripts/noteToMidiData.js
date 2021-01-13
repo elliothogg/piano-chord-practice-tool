@@ -88,25 +88,25 @@ var noteMidiDB = {
     Bb0: 22,
     A0: 21
 };
-
+//each number represents number of half-steps from previous note, beginning at root
 var chordStructuresBothHands = {
-    dim: "33",
-    aug: "44",
-    maj7: "434",
-    7: "433",
-    min7: "343",
-    9: "4333",
-    "7(b9)" : "4332",
-    "13(b9)": "43328"
+    dim: "",
+    aug: "",
+    maj7: "79345",
+    7: "",
+    min7: "",
+    9: "",
+    "7(b9)" : "",
+    "13(b9)": ""
 };
 
 var chordStructuresLH = {
-    dim: "33",
-    aug: "44",
-    maj7: "434",
-    7: "433",
-    min7: "343",
-    9: "4333",
-    "7(b9)" : "4332",
-    "13(b9)": "43328"
+    dim: "",
+    aug: "",
+    maj7: "",
+    7: "",
+    min7: "",
+    9: "",
+    "7(b9)" : "",
+    "13(b9)": ""
 };

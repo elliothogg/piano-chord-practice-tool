@@ -77,7 +77,7 @@ input {
 }
 
 label {
-  padding-right: 10px;
+  padding-right: 0;
 }
 
 input {
@@ -169,7 +169,7 @@ input {
   display: inline-flex;
 }
 
-#C4 p {
+#n60 p {
   margin: 0;
   position: absolute;
   bottom: 0%;
