@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/style.css">
-    <script type="text/javascript" src="scripts/chord-visualiser.js"></script>
     <script type="text/javascript" src="scripts/noteToMidiData.js"></script>
+    <script type="text/javascript" src="scripts/chord-visualiser.js"></script>
     <title>piano-chord-practice-tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -63,43 +63,52 @@
         <form>
             <fieldset onchange="displayChordText()">
                 <legend>Choose Chord:</legend>
-                
-                <input type="radio" id="dim" name="chord" value="&#9900;">
-                <label for="triads-only">&#9900;</label>
-                
-                <input type="radio" id="aug" name="chord" value="+">
-                <label for="triads-only">+</label>
-                
-                <input type="radio" id="maj7" name="chord" value="maj7">
-                <label for="triads-only">maj7</label>
+
+                <input type="radio" id="min7" name="chord" value="min7">
+                <label for="triads-only">Min7</label>
 
                 <input type="radio" id="7" name="chord" checked value="7">
                 <label for="triads-only">7</label>
+                
+                <input type="radio" id="maj7" name="chord" value="maj7">
+                <label for="triads-only">Maj7</label>
+                
+                <input type="radio" id="min6/9" name="chord" value="min6/9">
+                <label for="triads-only">Min6/9</label>
 
-                <input type="radio" id="min7" name="chord" value="min7">
-                <label for="triads-only">min7</label>
+                <input type="radio" id="min9" name="chord" value="min9">
+                <label for="triads-only">Min9</label>
 
-                <input type="radio" id="9" name="chord" value="9">
-                <label for="triads-only">9</label>
+                <input type="radio" id="maj9" name="chord" value="maj9">
+                <label for="triads-only">Maj9</label>
+
+                <input type="radio" id="7(#5#9)" name="chord" value="7(#5#9)">
+                <label for="triads-only">7(#5#9)</label>
 
                 <input type="radio" id="7(b9)" name="chord" value="7(b9)">
                 <label for="triads-only">7(b9)</label>
 
-                <input type="radio" id="13(b9)" name="chord" value="13(b9)">
-                <label for="triads-only">13(b9)</label>
+                <input type="radio" id="7(b9b13)" name="chord" value="7(b9b13)">
+                <label for="triads-only">7(b9b13)</label>
+
+                <input type="radio" id="min11" name="chord" value="min11">
+                <label for="triads-only">Min11</label>
+
+                <input type="radio" id="13" name="chord" value="13">
+                <label for="triads-only">13</label>
             
            
             </fieldset>
         </form>
 
         <form>
-            <fieldset>
+            <fieldset onchange="displayChordText()">
                 <legend>Choose Arrangement:</legend>
         
-            <input type="radio" id="both-hands" name="arrangement" value="both-hands" checked>
+            <input type="radio" id="both-hands" name="arrangement" value="chordStructuresBothHands" checked>
             <label for="triads-only">Both Hands</label>
             
-            <input type="radio" id="LH" name="arrangement" value="LH">
+            <input type="radio" id="LH" name="arrangement" value="chordStructuresLH">
             <label for="7th-chords">LH</label>
             </fieldset>
         </form>
