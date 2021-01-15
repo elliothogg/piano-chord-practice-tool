@@ -1,4 +1,4 @@
-var noteMidiDB = {
+const noteMidiDB = {
     C8: 108,
     B7: 107,
     Bb7: 106,
@@ -89,7 +89,7 @@ var noteMidiDB = {
     A0: 21
 };
 //each number represents number of half-steps from previous note, beginning at root
-var chordStructuresBothHands = {
+const chordStructuresBothHands = {
     dim: "",
     aug: "",
     maj7: "79345",
@@ -100,7 +100,7 @@ var chordStructuresBothHands = {
     "13(b9)": ""
 };
 
-var chordStructuresLH = {
+const chordStructuresLH = {
     dim: "",
     aug: "",
     maj7: "",
